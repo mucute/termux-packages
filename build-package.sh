@@ -475,13 +475,6 @@ while (($# >= 1)); do
 		-f) TERMUX_FORCE_BUILD=true;;
 		-F) TERMUX_FORCE_BUILD_DEPENDENCIES=true && TERMUX_FORCE_BUILD=true;;
 		-i)
-			if [ "$TERMUX_ON_DEVICE_BUILD" = "true" ]; then
-				termux_error_exit "./build-package.sh: option '-i' is not available for on-device builds"
-			elif [ "$TERMUX_PREFIX" != "/data/data/cn.mucute.simple/linux" ]; then
-				termux_error_exit "./build-package.sh: option '-i' is available only when TERMUX_APP_PACKAGE is 'com.termux'"
-			else
-				export TERMUX_INSTALL_DEPS=true
-			fi
 			;;
 		-I)
 			if [ "$TERMUX_PREFIX" != "/data/data/com.termux/files/usr" ]; then
