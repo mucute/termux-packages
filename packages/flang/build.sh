@@ -4,14 +4,15 @@ TERMUX_PKG_LICENSE="Apache-2.0"
 TERMUX_PKG_LICENSE_FILE="flang/LICENSE.TXT"
 TERMUX_PKG_MAINTAINER="@termux"
 LLVM_MAJOR_VERSION=18
-TERMUX_PKG_VERSION=${LLVM_MAJOR_VERSION}.1.7
+TERMUX_PKG_VERSION=${LLVM_MAJOR_VERSION}.1.8
 TERMUX_PKG_SRCURL=https://github.com/llvm/llvm-project/releases/download/llvmorg-$TERMUX_PKG_VERSION/llvm-project-$TERMUX_PKG_VERSION.src.tar.xz
-TERMUX_PKG_SHA256=74446ab6943f686391954cbda0d77ae92e8a60c432eff437b8666e121d748ec4
+TERMUX_PKG_SHA256=0b58557a6d32ceee97c8d533a59b9212d87e0fc4d2833924eb6c611247db2f2a
 TERMUX_PKG_AUTO_UPDATE=false
 TERMUX_PKG_HOSTBUILD=true
 # `flang-new` should be rebuilt when libllvm bumps version.
 # See https://github.com/termux/termux-packages/issues/19362
-TERMUX_PKG_DEPENDS="libc++, libllvm (= $TERMUX_PKG_VERSION), clang (= $TERMUX_PKG_VERSION), lld (= $TERMUX_PKG_VERSION), mlir (= $TERMUX_PKG_VERSION)"
+DEP_QUALIFIER=$TERMUX_PKG_VERSION-$TERMUX_PKG_REVISION
+TERMUX_PKG_DEPENDS="libc++, libllvm (= $DEP_QUALIFIER), clang (= $DEP_QUALIFIER), lld (= $DEP_QUALIFIER), mlir (= $DEP_QUALIFIER)"
 TERMUX_PKG_BUILD_DEPENDS="libllvm-static"
 
 # Upstream doesn't support 32-bit arches well. See https://github.com/llvm/llvm-project/issues/57621.
