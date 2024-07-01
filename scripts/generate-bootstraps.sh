@@ -16,14 +16,14 @@ BOOTSTRAP_ANDROID10_COMPATIBLE=false
 # By default, bootstrap archives will be built for all architectures
 # supported by Termux application.
 # Override with option '--architectures'.
-TERMUX_ARCHITECTURES=("aarch64" "arm" "i686" "x86_64")
+TERMUX_ARCHITECTURES=("aarch64" "x86_64")
 
 # The supported termux package managers.
 TERMUX_PACKAGE_MANAGERS=("apt" "pacman")
 
 # The repository base urls mapping for package managers.
 declare -A REPO_BASE_URLS=(
-	["apt"]="https://packages-cf.termux.dev/apt/termux-main"
+	["apt"]="https://simple.mucute.cn/apt/simple-main"
 	["pacman"]="https://service.termux-pacman.dev/main"
 )
 
