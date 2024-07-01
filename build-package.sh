@@ -539,9 +539,9 @@ if [ "${TERMUX_INSTALL_DEPS-false}" = "true" ] || [ "${TERMUX_PACKAGE_LIBRARY-bi
 		gpg --import "$TERMUX_SCRIPTDIR/packages/termux-keyring/grimler.gpg"
 		gpg --no-tty --command-file <(echo -e "trust\n5\ny")  --edit-key 2C7F29AE97891F6419A9E2CDB0076E490B71616B
 	}
-	gpg --list-keys CC72CF8BA7DBFA0182877D045A897D96E57CF20C > /dev/null 2>&1 || {
-		gpg --import "$TERMUX_SCRIPTDIR/packages/termux-keyring/termux-autobuilds.gpg"
-		gpg --no-tty --command-file <(echo -e "trust\n5\ny")  --edit-key CC72CF8BA7DBFA0182877D045A897D96E57CF20C
+	gpg --list-keys EE06FFA2972536C118C3C6E8EEDF7F3FB0A0120C > /dev/null 2>&1 || {
+		gpg --import "$TERMUX_SCRIPTDIR/packages/termux-keyring/simple-repo-key.gpg"
+		gpg --no-tty --command-file <(echo -e "trust\n5\ny")  --edit-key EE06FFA2972536C118C3C6E8EEDF7F3FB0A0120C
 	}
 	gpg --list-keys 998DE27318E867EA976BA877389CEED64573DFCA > /dev/null 2>&1 || {
 		gpg --import "$TERMUX_SCRIPTDIR/packages/termux-keyring/termux-pacman.gpg"
