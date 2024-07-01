@@ -1,10 +1,10 @@
 {
   "pkg_format": "debian",
   "packages": {
-    "name": "termux-main",
+    "name": "simple-main",
     "distribution": "stable",
     "component": "main",
-    "url": "https://packages-cf.termux.dev/apt/termux-main"
+    "url": "https://simple.mucute.cn/apt/simple-main"
   },
   "root-packages": {
     "name": "termux-root",
